@@ -5,3 +5,12 @@ body{
 .welcome{
 	padding-top: 5%;
 }
+
+.hw{
+	padding-top: 10vh;
+	height: 100vh;
+} 
+
+.nav-tabs{
+	background-color: black;
+}

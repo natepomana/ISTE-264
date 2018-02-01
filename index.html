@@ -6,9 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="src/css/mdb.min.css">
 	<link rel="stylesheet" type="text/css" href="src/css/index.css">
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar">
 	<!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark indigo">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark indigo">
 	<div class="container">
     <!-- Navbar brand -->
     <a class="navbar-brand" href="#">ISTE-264</a>
@@ -21,15 +21,24 @@
     <div class="collapse navbar-collapse" id="navbarContent">
 
         <!-- Links -->
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <ul class="navbar-nav mr-auto" id="navbar" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link" href="#"> Home </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Process</a>
+                <a class="nav-link" href="#hw1"> HW 1 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Final</a>
+                <a class="nav-link" href="#hw2"> HW 2 </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#hw3"> HW 3 </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#hw4"> HW 4 </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#hw5"> HW 5 </a>
             </li>
         </ul>
         <!-- Links -->
@@ -39,8 +48,9 @@
 </nav>
 <!--/.Navbar-->
 
+<!-- Landing div -->
 <div class="row">
-	<div class="container welcome">
+	<div class="container welcome" id="home">
 		<div class="col">
 			<div class="jumbotron">
 
@@ -48,17 +58,41 @@
 			    <p class="lead">Welcome! This is a page dedicated to ISTE-264, Prototyping &amp; Usability Testing. This class
 			    has a semester-long project, where progress will be posted here as time goes on, eventually leading to a viable product.</p>
 			    <hr class="my-4">
-			    <p>This is more filler text for now since idk what will go here.
-			    </p>
+			    <p>Select homework assignment to view.</p>
 			    <p class="lead">
-			        <a class="btn btn-lg btn-primary" href="#" role="button">Let's go!</a>
+			        <a class="btn btn-lg btn-primary" href="#hw1" role="button">HW 1</a>
+                    <a class="btn btn-lg btn-primary" href="#hw2" role="button">HW 2</a>
+                    <a class="btn btn-lg btn-primary" href="#hw3" role="button">HW 3</a>
+                    <a class="btn btn-lg btn-primary" href="#hw4" role="button">HW 4</a>
+                    <a class="btn btn-lg btn-primary" href="#hw5" role="button">HW 5</a>
 			    </p>
 
 			</div>
 		</div>
 	</div>
 </div>	
+<!-- /.landing div -->
 
+
+<div class="container hw" id="hw1">
+    <h2>HW1</h2>
+</div>
+
+<div class="container hw" id="hw2">
+    <h2>HW2</h2>
+</div>
+
+<div class="container hw" id="hw3">
+    <h2>HW3</h2>
+</div>
+
+<div class="container hw" id="hw4">
+    <h2>HW4</h2>
+</div>
+
+<div class="container hw" id="hw5">
+    <h2>HW5</h2>
+</div>
 
 
 </body>
@@ -67,4 +101,8 @@
 <script src="src/js/bootstrap.min.js"></script>
 <script src="src/js/mdb.min.js"></script>
 <script src="src/js/index.js"></script>
+<script type="text/javascript">
+    $('body').scrollspy({ target: '#navbar' })
+</script>
 </html>
+
