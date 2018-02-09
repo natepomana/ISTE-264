@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="src/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="src/css/mdb.min.css">
 	<link rel="stylesheet" type="text/css" href="src/css/index.css">
+    <link rel="stylesheet" type="text/css" href="src/css/loading.css">
 </head>
 <body data-spy="scroll" data-target="#navbar">
 	<!--Navbar-->
@@ -109,6 +110,7 @@
         <br/>
         <h3>Filler Header</h3> 
         <h5>This is filler text.</h5> 
+        <div id="testing"></div>
     </div>
 </div>
 
@@ -148,9 +150,17 @@
 <script src="src/js/popper.min.js"></script>
 <script src="src/js/bootstrap.min.js"></script>
 <script src="src/js/mdb.min.js"></script>
+<script src="src/js/loading.js"></script>
 <script src="src/js/index.js"></script>
 <script type="text/javascript">
     $('body').scrollspy({ target: '#navbar' })
+    $('#testing').loading({
+        type: 'circle',
+        size: '150px',
+        colors: ['#eee','#222'],
+        speed: .5,
+        weight: '1px'
+    });
 </script>
 </html>
 
