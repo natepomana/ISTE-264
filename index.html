@@ -105,14 +105,74 @@
 
 <div class="container hw" id="hw2">
     <div class="jumbotron">
-        <h2>HW2</h2>
+        <h2>HW2 - Lo-Fi Prototyping</h2>
         <hr/>
         <br/>
-        <h3>Filler Header</h3> 
-        <h5>This is filler text.</h5> 
-        <div id="testing"></div>
+        <h3>The Process</h3> 
+        <h5>Before I began creating lo-fi prototypes, I wanted to take a step back and look at the Key User Interface Heuristics, and see what I could incorporate into Loading.js. From the 10, I decided to focus on:</h5> 
+        <br/>
+        <ul>
+            <li>Visibility of system status</li>
+            <li>Consistency and standards</li>
+            <li>Flexibility and efficiency of use</li>
+            <li>Aesthetic and minimalist design</li>
+            <li>Manage errors</li>
+            <li>Help and documentation.</li>
+        </ul>
+        <br/>
+        <h5>From here, I prototyped samples of loading animations, but two stuck out the most to me - a circle spinning and the wave.</h5>
+        <br/>
+        <h3>The Circle</h3>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8">
+                <img src="src/img/lo_proto_circle.jpg" style="width: 100%;">
+                <h5>The circle animation is extremely flexible. It can be created as either a minimalist thin design, or as a heavier, thicker design. This can be decided by the developer as what would match best with the company. Possibly, instead of a ring, a dot or segment could travel in a circle, again showing a minimalist design.</h5>
+            </div>
+            <div class="col"></div>
+        </div>
+        
+        <br/>
+        <h3>The Wave</h3>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8">
+                <img src="src/img/lo_proto_wave.jpg" style="width: 100%;">
+                <h5>
+                    The wave animation would also be a minimalist design, and flexible of use. A developer could edit the speed of which the wave action happens. If they want a simpler wave, there could be a dot wave. more weight? a line wave. I want the developer to have full control to edit and manipulate the animation to match what the product of the site that this would be going on.
+                </h5>
+            </div>
+            <div class="col"></div>
+        </div>
+        <br/>
+        <div>
+            <h5>After some tinkering, I went ahead and created a sample of what a sample thin circle would look like.</h5>
+            <br/>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <code>
+                        $('#testing').loading({<br/>&emsp;&emsp;
+                            type: 'circle',<br />&emsp;&emsp;
+                            size: '150px',<br />&emsp;&emsp;
+                            colors: ['#eee','#222'],<br />&emsp;&emsp;
+                            speed: 1,<br />&emsp;&emsp; 
+                            weight: '2px'<br />
+                        });
+                    </code>
+                    
+                </div>
+                <div class="co-md-3">
+                    <div id="testing"></div>      
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+        </div>
+        <br/>
+        <h5>To notify developers of errors, check the console (F12 -> Console) to see a sample error message to help developers.</h5>
+        <h5>From here, I plan on expanding out further to create more samples and ideas, to eventually make a library for developers to use and test.</h5>
     </div>
-</div>
 
 <div class="container hw" id="hw3">
     <div class="jumbotron">
@@ -151,15 +211,16 @@
 <script src="src/js/bootstrap.min.js"></script>
 <script src="src/js/mdb.min.js"></script>
 <script src="src/js/loading.js"></script>
-<script src="src/js/index.js"></script>
 <script type="text/javascript">
-    $('body').scrollspy({ target: '#navbar' })
     $('#testing').loading({
         type: 'circle',
         size: '150px',
         colors: ['#eee','#222'],
-        speed: .5,
-        weight: '1px'
+        speed: 1,
+        weight: '2px'
+    });
+    $('#error').loading({
+
     });
 </script>
 </html>
