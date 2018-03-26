@@ -173,30 +173,45 @@
         <h5>To notify developers of errors, check the console (F12 -> Console) to see a sample error message to help developers.</h5>
         <h5>From here, I plan on expanding out further to create more samples and ideas, to eventually make a library for developers to use and test.</h5>
     </div>
+</div>
 
 <div class="container hw" id="hw3">
     <div class="jumbotron">
-        <h2>HW3</h2>
+        <h2>HW3 - Evaluation of Lo-Fi Prototype</h2>
         <hr/>
         <br/>
-        <h3>Filler Header</h3> 
-        <h5>This is filler text.</h5> 
+        <h3>The Good, The Bad, and The Ugly</h3> 
+        <h5>I was very surprised by the comments I received from both friends and family. Total I asked 10 people for their opinions, 8 of them being friends and 2 of them being family.</h5>
+        <br/>
+        <h5>5 friends, whose majors lay in Golisano, (Web and Mobile, Software Engineering, Computing Security) were interested in Loading.js. They made comments regarding how nice it would be to incorporate simple loaders into their projects. However, I was surprised that they did not think this would be useful for larger sites like Facebook and Twitter because they have some sort of loading mechanism already in place. When I asked how they knew that a page was loaded, they replied with, "Chrome has a little wheel on the tab while the page is loading". They also mentioned since they are computing majors that if a page isn't loading, they know how to debug such a problem as it arises.</h5>
+        <br/>
+        <h5>The other 3 friends did not see themselves using this at all for either personal projects or otherwise. This is probably because none of their majors are related to computing (Marketing, Biomedical Sciences, Political Science). However, the friend in Biomedical Sciences said, "A loader would be nice on lab equipment, to know that the machine is doing something rather than nothing." This really intrigued me since I did not take into consideration software that exists outside of the internet realm, and makes me wonder if I could possibly cater to this audience.</h5>
+        <br/>
+        <h5>My family members gave me the most meaningful feedback since both of them work full time in a corporate setting. My brother, a Full Stack Developer at The Walt Disney Company, expressed strong interest in this. "This would be really nice! This would allow for standardize 'loaders' to have viewable for clients, and can be themed based on the department or branch of Disney." This meant a lot to me to know that maybe after I'm done, he may introduce it to a corporation and actually use it!</h5>
+        <br/>
+        <h5>The other family member was my mother, who has been working as inside sales for over 30 years. With that, she has dealt with online software, such as Oracle, for over 12 years. She made it very clear that she hates loader wheels. "The problem is I can't just sit and watch the wheel go round and round for no feedback. It's very difficult to have a potential new customer on the line and just saying that 'our internet is down' or 'our internet is slow'." She went on further saying that what would be extremely useful would be if while the wheel is spinning, some sort of feedback was given to the user, so she's not wasting her time or a client's time. This really meant a lot to me because she could be losing customers and orders because of something so small as providing feedback to users while the wheel is spinning.</h5>
+        <br/>
+        <h5>Honestly, I am shocked. I did not expect to get this kind of feedback. I really want to take into consideration other markets that don't have to do with the internet, and also offer some sort of feedback to users.</h5>
+        <br/>
     </div>
 </div>
 
 <div class="container hw" id="hw4">
     <div class="jumbotron">
-        <h2>HW4</h2>
+        <h2>HW4 - Hi-Fi Prototyping</h2>
         <hr/>
         <br/>
         <h3>Filler Header</h3> 
-        <h5>This is filler text.</h5> 
+        <h5>Testing sample loaders.</h5> 
+        <div id="test">
+            
+        </div>
     </div>
 </div>
 
 <div class="container hw" id="hw5">
     <div class="jumbotron">
-    <h2>HW5</h2>
+    <h2>HW5 - Evaluation of Hi-Fi Prototype</h2>
         <hr/>
         <br/>
         <h3>Filler Header</h3> 
@@ -212,15 +227,25 @@
 <script src="src/js/mdb.min.js"></script>
 <script src="src/js/loading.js"></script>
 <script type="text/javascript">
+    $().loading({});
+    $('#test').loading({
+        type: 'line',
+        style: 'line',
+        colors: ['#444'],
+        length: '500px',
+        width: '10px',
+        height: '100px',
+        count: 5,
+        time: 2
+    });
+
+
     $('#testing').loading({
         type: 'circle',
         size: '150px',
         colors: ['#eee','#222'],
         speed: 1,
         weight: '2px'
-    });
-    $('#error').loading({
-
     });
 </script>
 </html>
