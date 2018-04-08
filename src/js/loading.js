@@ -13,7 +13,7 @@
 				line(this,data);
 				break;
 			default:
-				console.error("Missing type. (ex: type: 'circle')")
+				console.error("Missing type. (ex: type: 'circle')");
 		}
 
 		
@@ -21,6 +21,31 @@
 
 	function circle(ele,data){
 		// max data.weight is half of data.size.
+		// check types to make sure they are already set, if not send errors to console.
+		var errors = false;
+		//size
+		if (typeof data.size === "undefined" || typeof data.size != "string" || data.size == "") {
+			console.error("Missing size. (ex: size: '150px')");
+			errors = true;
+		}
+		//colors
+		if (typeof data.colors === "undefined" || data.colors.constructor !== Array) {
+			console.error("Missing colors. (ex: colors: ['#456','#bbb']");
+			errors = true;
+		}
+		//speed
+		if (typeof data.speed === "undefined" || data.speed !== parseInt(data.speed, 10)) {
+			console.error("Missing Speed. (ex: speed: 1)");
+			errors = true;
+		}
+		//weight
+		if (typeof data.weight === "undefined" ||  typeof data.weight != "string" || data.weight == "") {
+			console.error("Missing wieght. (ex: weight: '2px')");
+			errors = true;
+		}
+		if (errors) {
+			return;
+		}
 		$(ele).css({
 			'border' : data.weight+' solid '+data.colors[0],
 			'border-radius' : '50%',
