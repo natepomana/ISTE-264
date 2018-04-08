@@ -230,7 +230,7 @@
                 <div class="btn btn-default" onclick="testCode()">Test</div>
             </div>
             <div class="col-sm-6">
-                <div id="test">
+                <div id="sampleLoad">
             
                 </div>
             </div>
@@ -266,7 +266,7 @@
         var colors = $('#colors').val();
         var speed = $('#speed').val();
         var weight = $('#weight').val();
-        $('#test').loading({
+        $('#sampleLoad').loading({
             type: type,
             size: size,
             colors: Array.from(colors),
@@ -286,7 +286,7 @@
         speed: 1,
         weight: '2px'
     });
-	$('#test').loading({
+	$('#sampleLoad').loading({
         type: 'circle',
         size: '150px',
         colors: ['#eee','#222'],
