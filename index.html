@@ -201,11 +201,43 @@
         <h2>HW4 - Hi-Fi Prototyping</h2>
         <hr/>
         <br/>
-        <h3>Filler Header</h3> 
-        <h5>Testing sample loaders.</h5> 
-        <div id="test">
+        <h3>Loading.js Example usage.</h3> 
+        <h5>As a Hi-Fi prototype, users would type out the "code" necessary to create a circle loader. With the text field below, a user can type in sample "code", with the help of <a href="https://github.com/npomana/ISTE-264" target="blank">sample documentation.</a> Don't forget to check the console for errors!</h5>
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="md-form col-sm-8">
+                    <input type="text" id="type" class="form-control" value="circle">
+                    <label for="type">Type</label>
+                </div>
+                <div class="md-form col-sm-8">
+                    <input type="text" id="size" class="form-control">
+                    <label for="size">Size</label>
+                </div>
+                <div class="md-form col-sm-8">
+                    <input type="text" id="colors" class="form-control">
+                    <label for="colors">Colors</label>
+                </div>
+                <div class="md-form col-sm-8">
+                    <input type="text" id="speed" class="form-control">
+                    <label for="speed">Speed</label>
+                </div>
+                <div class="md-form col-sm-8">
+                    <input type="text" id="weight" class="form-control">
+                    <label for="weight">Weight</label>
+                </div>
+                <div class="btn btn-default" onclick="testCode()">Test</div>
+            </div>
+            <div class="col-sm-6">
+                <div id="test">
             
+                </div>
+            </div>
         </div>
+
+
+        
     </div>
 </div>
 
@@ -227,17 +259,24 @@
 <script src="src/js/mdb.min.js"></script>
 <script src="src/js/loading.js"></script>
 <script type="text/javascript">
+    function testCode(){
+        console.log("New loader.");
+        var type = $('#type').val();
+        var size = $('#size').val();
+        var colors = $('#colors').val();
+        var speed = $('#speed').val();
+        var weight = $('#weight').val();
+        $('#test').loading({
+            type: type,
+            size: size,
+            colors: Array.from(colors),
+            speed: parseInt(speed),
+            weight: weight
+        });
+    }
+
+
     $().loading({});
-    $('#test').loading({
-        type: 'line',
-        style: 'line',
-        colors: ['#444'],
-        length: '500px',
-        width: '10px',
-        height: '100px',
-        count: 5,
-        time: 2
-    });
 
 
     $('#testing').loading({
